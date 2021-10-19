@@ -14,7 +14,7 @@ class Solution {
         // 1<2 3>2 3<6 1,6
         for(int i=1;i<intervals.length;i++){
                 if(intervals[i][0]>result.get(result.size()-1)[1]){
-                    result.add(result.size(), intervals[i]);
+                    result.add(intervals[i]);
                 }else{
                     int[] tmp = result.get(result.size()-1);
                     tmp[1] = Math.max(tmp[1], intervals[i][1]);
